@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "b8936308-5147-4a44-97a2-86e7b3624c6e",
+		"name": "A2D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATEADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"finaladmin1\",\r\n    \"email\":\"finaladmin1@email.com\",\r\n    \"phone\":\"8888888888\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"finaladmin1@email.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BOOK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNjk2MzY0NWM5NmU1MjJkN2ViMDc0IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDUyMTgyOX0.ArMC8eCUoeMLa-7gHpnRgTKiQtwr0rm4YJOyHvk6pD8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"finalbook2\",\r\n\"authorName\":\"testauthor1\",\r\n\"publisherName\":\"testpublisher1\",\r\n\"adminId\":\"6336963645c96e522d7eb074\",\r\n\"category\":\"finalcategory2\",\r\n\"totalPages\":10,\r\n\"price\":\"100 rupees\"\r\n\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createBook?adminId=6336963645c96e522d7eb074",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createBook"
+					],
+					"query": [
+						{
+							"key": "adminId",
+							"value": "6336963645c96e522d7eb074"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL BOOKS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNDRlYjJkMTY4NGU2Nzk5YzJiMzE5IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDQzNTQzMn0.LH-uVkv-GzeJSvnS3qBGS7yon63M1t6O6zoIWVGyYis",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/ListOfAllBooks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ListOfAllBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"testuser8\",\r\n  \"email\":\"testuser8@email.com\",\r\n  \"phone\":9999999999,\r\n  \"password\":\"12345678\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testuser8@email.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/logInUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logInUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOTAL BOOKS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNDRlYjJkMTY4NGU2Nzk5YzJiMzE5IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDQzNTQzMn0.LH-uVkv-GzeJSvnS3qBGS7yon63M1t6O6zoIWVGyYis",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/totalBooks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"totalBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BOOK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNjk2MzY0NWM5NmU1MjJkN2ViMDc0IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDUyMTgyOX0.ArMC8eCUoeMLa-7gHpnRgTKiQtwr0rm4YJOyHvk6pD8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/deleteBook/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteBook",
+						":bookId"
+					],
+					"query": [
+						{
+							"key": "adminId",
+							"value": "63344eb2d1684e6799c2b319",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "6336970245c96e522d7eb07a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK DETAILS BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM0NGM0OGY3NmEyYjZlNTkzM2VkYTgiLCJwcm9qZWN0IjoibGlicmFyeS1tYW5hZ2VtZW50Iiwib3JnYW5pemF0aW9uIjoiQTJEIiwiaWF0IjoxNjY0NDQwNjcxfQ.OdgtbwpgFviGW2MNAhZ3YmNixxPZo89W6DckyNdfYDI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getBookDetails/:name",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getBookDetails",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "finalbook1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BOOK DETAILS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNjk2MzY0NWM5NmU1MjJkN2ViMDc0IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDUyMTgyOX0.ArMC8eCUoeMLa-7gHpnRgTKiQtwr0rm4YJOyHvk6pD8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"category\":\"new category\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updatebook/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatebook",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "6336970245c96e522d7eb07a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW BOOK ISSUED DOCUMENT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNDRlYjJkMTY4NGU2Nzk5YzJiMzE5IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDQzNTQzMn0.LH-uVkv-GzeJSvnS3qBGS7yon63M1t6O6zoIWVGyYis",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"adminId\":\"63344eb2d1684e6799c2b319\",\r\n  \"bookId\":\"6333dbccbda578f84d82a7c7\",\r\n  \"userId\":\"63344c48f76a2b6e5933eda8\",\r\n  \"issuedDate\":\"25/06/2022\",\r\n  \"returnedDate\":\"00/00/0000\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/newIssue?adminId=63344eb2d1684e6799c2b319",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"newIssue"
+					],
+					"query": [
+						{
+							"key": "adminId",
+							"value": "63344eb2d1684e6799c2b319"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ISSUED DOCUMENT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNDRlYjJkMTY4NGU2Nzk5YzJiMzE5IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDQ0MTA2MX0.-sQL-55lDaeyeca6k6lrejHQs_6PQAsokpMOPnl7zww",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"returnedDate\":\"25/09/2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateIssuedDoc/:bookIssueId?adminId=63344eb2d1684e6799c2b319",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateIssuedDoc",
+						":bookIssueId"
+					],
+					"query": [
+						{
+							"key": "adminId",
+							"value": "63344eb2d1684e6799c2b319"
+						}
+					],
+					"variable": [
+						{
+							"key": "bookIssueId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All ISSUED DOC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNjk2MzY0NWM5NmU1MjJkN2ViMDc0IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDUyMTgyOX0.ArMC8eCUoeMLa-7gHpnRgTKiQtwr0rm4YJOyHvk6pD8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getIssuedBookList?adminId=6336963645c96e522d7eb074",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getIssuedBookList"
+					],
+					"query": [
+						{
+							"key": "adminId",
+							"value": "6336963645c96e522d7eb074"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK ISSUED BY USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjMzNTk5MWEyZDEwMzE0NjM5NTllYTY3IiwicHJvamVjdCI6ImxpYnJhcnktbWFuYWdlbWVudCIsIm9yZ2FuaXphdGlvbiI6IkEyRCIsImlhdCI6MTY2NDUxNTYxM30.hU7Rx0r-CCUMg3oGnjF6P88ZXWvclm_zyksmdmuAWEE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/bookIssuedList/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookIssuedList",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "63344c48f76a2b6e5933eda8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
